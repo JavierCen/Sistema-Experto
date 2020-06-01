@@ -1,0 +1,63 @@
+% El programa consiste en las habilidades de los estudiantes y en base en ello se elige o selecciona la carrera
+% con sus respectivos maestros y las materia que imparten.
+
+carrera('sistemas computacionales').
+carrera('administracion de empresas').
+carrera('diseño grafico').
+carrera('enfermeria general').
+carrera('derecho').
+
+alumnos('miguel').
+alumnos('francisco').
+alumnos('javier').
+alumnos('jesus').
+alumnos('alejandra').
+alumnos('roxana').
+alumnos('emmanuel').
+
+cualidades('programacion','sistemas computacionales').
+cualidades('base de datos','sistemas computacionales').
+cualidades('redes de computadora','sistemas computacionales').
+cualidades('sistemas operativos','sistemas computacionales').
+cualidades('matematicas','sistemas computacionales').
+
+cualidades('contabilidad','administracion de empresas').
+cualidades('mercadotecnia','administracion de empresas').
+cualidades('matematicas financiera','administracion de empresas').
+cualidades('administracion','administracion de empresas').
+
+cualidades('edicion de imagenes','diseño grafico').
+cualidades('edicion de video','diseño grafico').
+cualidades('creatividad','diseño grafico').
+
+cualidades('salud general','enfermeria general').
+cualidades('anatomia humana','enfermeria general').
+cualidades('famacologia','enfermeria general').
+cualidades('nutricion humana','enfermeria general').
+cualidades('bioquimica','enfermeria general').
+
+cualidades('derecho civil','derecho').
+cualidades('derecho penal','derecho').
+cualidades('derecho constitucional','derecho').
+cualidades('derecho del trabajo','derecho').
+cualidades('derecho financiero','derecho').
+
+seleccion('miguel','redes de computadora').
+seleccion('miguel','sistemas operativos').
+seleccion('miguel','programacion').
+seleccion('francisco','redes de computadora').
+seleccion('javier','derecho civil').
+seleccion('javier','derecho del trabajo').
+seleccion('jesus','edicion de imagenes').
+seleccion('jesus','edicion de video').
+seleccion('alejandra','contabilidad').
+seleccion('alejandra','administracion').
+seleccion('roxana','salud general').
+seleccion('roxana','famacologia').
+seleccion('roxana','nutricion humana').
+seleccion('emmanuel','matematicas financiera').
+seleccion('emmanuel','contabilidad').
+
+% Reglas
+
+asignacion(X,Y):- seleccion(X,Z), cualidades(Z,Y).
